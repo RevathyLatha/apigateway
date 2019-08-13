@@ -1,0 +1,105 @@
+{
+	"info": {
+		"_postman_id": "8dfce557-06d4-4634-9e11-d1b55340a6b4",
+		"name": "disable",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://localhost:5555/rest/apigateway/policyActions/ipdos",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "manage",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "Administrator",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"policyAction\": {\n        \"id\": \"ipdos\",\n        \"names\": [\n            {\n                \"value\": \"IP Based Denial of Service\",\n                \"locale\": \"en\"\n            }\n        ],\n        \"templateKey\": \"ipdos\",\n        \"parameters\": [\n            {\n                \"templateKey\": \"limitBy\",\n                \"values\": [\n                    \"IP\"\n                ]\n            },\n            {\n                \"templateKey\": \"isDOSEnabled\",\n                \"values\": [\n                    \"false\"\n                ]\n            },\n            {\n                \"templateKey\": \"maximumRequests\",\n                \"values\": [\n                    \"5\"\n                ]\n            },\n            {\n                \"templateKey\": \"requestsPerSeconds\",\n                \"values\": [\n                    \"10\"\n                ]\n            },\n            {\n                \"templateKey\": \"inProgressRequests\",\n                \"values\": [\n                    \"5\"\n                ]\n            },\n            {\n                \"templateKey\": \"whenLimitExceeds\",\n                \"values\": [\n                    \"Add to Deny List\"\n                ]\n            },\n            {\n                \"templateKey\": \"blockInterval\",\n                \"values\": [\n                    \"0\"\n                ]\n            },\n            {\n                \"templateKey\": \"customErrorMessage\",\n                \"values\": [\n                    \"maximum request\"\n                ]\n            },\n            {\n                \"templateKey\": \"trustedIPRange\",\n                \"values\": []\n            }\n        ],\n        \"active\": false\n    }\n}"
+				},
+				"url": {
+					"raw": "http://localhost:5555/rest/apigateway/policyActions/ipdos",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5555",
+					"path": [
+						"rest",
+						"apigateway",
+						"policyActions",
+						"ipdos"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "disabled",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"policyAction\": {\n        \"id\": \"ipdos\",\n        \"names\": [\n            {\n                \"value\": \"IP Based Denial of Service\",\n                \"locale\": \"en\"\n            }\n        ],\n        \"templateKey\": \"ipdos\",\n        \"parameters\": [\n            {\n                \"templateKey\": \"limitBy\",\n                \"values\": [\n                    \"IP\"\n                ]\n            },\n            {\n                \"templateKey\": \"isDOSEnabled\",\n                \"values\": [\n                    \"false\"\n                ]\n            },\n            {\n                \"templateKey\": \"maximumRequests\",\n                \"values\": [\n                    \"5\"\n                ]\n            },\n            {\n                \"templateKey\": \"requestsPerSeconds\",\n                \"values\": [\n                    \"10\"\n                ]\n            },\n            {\n                \"templateKey\": \"inProgressRequests\",\n                \"values\": [\n                    \"5\"\n                ]\n            },\n            {\n                \"templateKey\": \"whenLimitExceeds\",\n                \"values\": [\n                    \"Add to Deny List\"\n                ]\n            },\n            {\n                \"templateKey\": \"blockInterval\",\n                \"values\": [\n                    \"0\"\n                ]\n            },\n            {\n                \"templateKey\": \"customErrorMessage\",\n                \"values\": [\n                    \"maximum request\"\n                ]\n            },\n            {\n                \"templateKey\": \"trustedIPRange\",\n                \"values\": []\n            }\n        ],\n        \"active\": false\n    }\n}"
+						},
+						"url": {
+							"raw": "http://localhost:5555/rest/apigateway/policyActions/ipdos",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5555",
+							"path": [
+								"rest",
+								"apigateway",
+								"policyActions",
+								"ipdos"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=UTF-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "615"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"policyAction\": {\n        \"id\": \"ipdos\",\n        \"names\": [\n            {\n                \"value\": \"IP Based Denial of Service\",\n                \"locale\": \"en\"\n            }\n        ],\n        \"templateKey\": \"ipdos\",\n        \"parameters\": [\n            {\n                \"templateKey\": \"limitBy\",\n                \"values\": [\n                    \"IP\"\n                ]\n            },\n            {\n                \"templateKey\": \"isDOSEnabled\",\n                \"values\": [\n                    \"false\"\n                ]\n            },\n            {\n                \"templateKey\": \"maximumRequests\",\n                \"values\": [\n                    \"5\"\n                ]\n            },\n            {\n                \"templateKey\": \"requestsPerSeconds\",\n                \"values\": [\n                    \"10\"\n                ]\n            },\n            {\n                \"templateKey\": \"inProgressRequests\",\n                \"values\": [\n                    \"5\"\n                ]\n            },\n            {\n                \"templateKey\": \"whenLimitExceeds\",\n                \"values\": [\n                    \"Add to Deny List\"\n                ]\n            },\n            {\n                \"templateKey\": \"blockInterval\",\n                \"values\": [\n                    \"0\"\n                ]\n            },\n            {\n                \"templateKey\": \"customErrorMessage\",\n                \"values\": [\n                    \"maximum request\"\n                ]\n            },\n            {\n                \"templateKey\": \"trustedIPRange\",\n                \"values\": []\n            }\n        ],\n        \"active\": false\n    }\n}"
+				}
+			]
+		}
+	]
+}
